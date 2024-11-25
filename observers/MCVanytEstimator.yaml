@@ -1,0 +1,16 @@
+contacts:
+  contactsDetection: Surfaces
+  surfacesForContactDetection: [RightFootCenter, LeftFootCenter, LeftHandCloseContact] # [LeftHandCloseContact] 
+
+leggedOdometry:
+        kappa: 10
+        lambdaInf: 0.001
+        correctContacts: true
+        odometryType: None 	
+        
+filterGains:
+        # tau: 0.15915 # 0.15915 # 0.15915 # 3.18 # 0.15915
+        finalAlpha: 5 # 5 # 0.0
+        finalBeta: 1 # 1 # 0.0 # 0.00001
+        rho1: 2
+        muContacts: 2

@@ -1,0 +1,16 @@
+filterGains:
+  finalAlpha: 5 # 5 # 0.0
+  finalBeta: 1 # 1 # 0.0 # 0.00001
+  finalGamma: 2 # 2 # 0.0
+#contactDetectionPropThreshold: 0.6
+#anchorFrameFunction: dejhifurh
+
+contacts:
+  contactsDetection: Surfaces
+  surfacesForContactDetection: [RightFootCenter, LeftFootCenter, LeftHandCloseContact] # [LeftHandCloseContact] 
+
+leggedOdometry:
+  kappa: 10
+  lambdaInf: 0.001
+  correctContacts: true
+  odometryType: None

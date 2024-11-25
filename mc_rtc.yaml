@@ -1,0 +1,33 @@
+MainRobot: kinova
+# MainRobot: JVRC1
+# Enabled: RALExpController
+Enabled: MonodzukuriKinovaDemo
+# Enabled: FittsLawController
+# Enabled: ForceSensorCalibration
+# Enabled: [Posture, EndEffector]
+
+Plugins: [mc_joystick_plugin, ExternalForcesEstimator]
+
+Timestep: 0.001
+LogPolicy: threaded
+Kortex:
+  init_posture:
+    on_startup: false
+    posture: [0.0,0.4173, 3.1292, -2.1829, 0.0, 1.0342, 1.5226]
+  torque_control:
+    mode: custom
+    lambda: [5.0,5.0,5.0,5.0,5.0,5.0,5.0]
+    # lambda: [1.0,1.0,1.0,1.0,1.0,1.0,1.0]
+    friction_compensation:
+      velocity_threshold: 0.02 # in rad
+      acceleration_threshold: 0.1 # in rad, for cases where velocity is below threshold
+      coulomb: [2.7, 2.7, 2.7, 2.7, 1.5, 1.5, 1.5]
+      viscous: [1.0, 1.0, 1.0, 1.0, 0.0, 0.0, 0.0]
+      # Mathieu
+      # coulomb: [3.0, 3.0, 3.0, 3.0, 1.25, 1.25, 1.25]
+      # viscous: [2.416, 2.416, 2.416, 2.416, 1.1, 1.1, 1.1]
+
+  kinova: # Name of the robot in the controller
+    ip: 192.168.1.10
+    username: admin
+    password: admin
