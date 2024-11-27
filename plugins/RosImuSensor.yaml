@@ -1,0 +1,6 @@
+reference_frame: FT_sensor_imu
+verbose: True
+ros_imu_sensor: True
+ros_topic_sensor: /bus0/ft_sensor0/ft_sensor_readings/imu
+imu_freq: 1000
+body_sensor_name: Accelerometer
